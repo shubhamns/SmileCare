@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@theme {
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-navy-800: #1e2a3b;
+  --color-navy-900: #0f172a;
+  --color-navy-sidebar: #152032;
+  --color-page: #f8fafc;
+  --color-booking: #eef2f6;
+  --color-admin: #f4f6f9;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-accent: "Caveat", cursive;
+  --radius-button: 8px;
+  --radius-card: 12px;
+  --radius-card-lg: 16px;
+  --radius-hero: 20px;
+  --shadow-card: 0 4px 24px -4px rgba(0, 0, 0, 0.08);
+  --shadow-hero: 0 25px 60px -15px rgba(15, 23, 42, 0.18);
+  --shadow-selected: 0 0 0 4px rgba(13, 148, 136, 0.12);
+  --spacing-section: 4rem;
+  --spacing-section-lg: 5rem;
+  --width-container: 1200px;
+  --width-booking: 720px;
+  --width-confirm: 480px;
+  --height-header: 72px;
+  --width-sidebar: 240px;
+}
+@layer base {
+  * { @apply border-slate-200; }
+  body { @apply bg-white text-navy-900 font-sans antialiased; }
+  h1, h2, h3, h4 { @apply text-navy-900 tracking-tight; }
+  a, button { @apply outline-none [-webkit-tap-highlight-color:transparent]; }
+  a:focus:not(:focus-visible), button:focus:not(:focus-visible) { @apply outline-none ring-0; }
+  a:focus-visible, button:focus-visible { @apply ring-2 ring-teal-600 ring-offset-2 rounded-sm; }
+}
+@layer components {
+  .sc-container { @apply max-w-[var(--width-container)] mx-auto px-6; }
+  .sc-section { @apply py-16 lg:py-20; }
+  .sc-section-alt { @apply py-16 lg:py-20 bg-page; }
+  .sc-section-white { @apply py-16 lg:py-20 bg-white; }
+  .sc-hero-title { @apply text-[2.375rem] lg:text-[3rem] font-bold leading-[1.1]; }
+  .sc-hero-stat { @apply flex items-center gap-2.5 min-w-0; }
+  .sc-hero-stat-value { @apply text-base font-bold text-navy-900 leading-tight; }
+  .sc-hero-stat-label { @apply text-xs text-slate-500 leading-tight; }
+  .sc-hero-image { @apply relative overflow-hidden rounded-[var(--radius-hero)] bg-slate-100 aspect-[5/4] w-full max-w-[540px] lg:max-w-none mx-auto lg:mx-0; box-shadow: var(--shadow-hero); }
+  .sc-section-title { @apply text-3xl lg:text-4xl font-bold; }
+  .sc-section-label { @apply text-[11px] font-semibold tracking-[0.12em] uppercase text-teal-600; }
+  .sc-body { @apply text-[15px] text-slate-500 leading-relaxed; }
+  .sc-badge-pill { @apply inline-block text-[11px] font-semibold tracking-[0.12em] uppercase text-teal-700 bg-[#ecfdf8] px-4 py-1.5 rounded-full; }
+  .sc-card-selected { @apply border-2 border-teal-600 bg-teal-50/20; box-shadow: var(--shadow-selected); }
+  .sc-card-elevated { @apply rounded-2xl border border-slate-200/60 bg-white; box-shadow: var(--shadow-card); }
+  .sc-booking-canvas { @apply min-h-[calc(100vh-var(--height-header))] bg-booking py-8 sm:py-10; }
+  .sc-admin-canvas { @apply min-h-screen bg-admin; }
+  .sc-icon-box { @apply h-10 w-10 bg-teal-50 rounded-xl flex items-center justify-center shrink-0; }
+  .sc-script { font-family: var(--font-accent); @apply font-bold text-teal-600; }
+  .sc-focus { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2; }
+}
+.rdp-root {
+  --rdp-accent-color: #0d9488;
+  --rdp-accent-background-color: #f0fdfa;
+}
