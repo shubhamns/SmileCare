@@ -2,6 +2,23 @@
 
 Full-stack dental clinic app with patient booking, doctor portal, and admin dashboard.
 
+## Screenshots
+
+### Public Website
+| Home | Services | Booking |
+|------|----------|---------|
+| ![Home](docs/screenshots/home.png) | ![Services](docs/screenshots/services.png) | ![Booking](docs/screenshots/booking.png) |
+
+### Admin Portal
+| Dashboard | Appointments |
+|-----------|--------------|
+| ![Admin Dashboard](docs/screenshots/admin-dashboard.png) | ![Admin Appointments](docs/screenshots/admin-appointments.png) |
+
+### Doctor Portal
+| Dashboard | Settings |
+|-----------|----------|
+| ![Doctor Dashboard](docs/screenshots/doctor-dashboard.png) | ![Doctor Settings](docs/screenshots/doctor-settings.png) |
+
 ## Tech Stack
 
 | Layer | Tools |
@@ -12,11 +29,11 @@ Full-stack dental clinic app with patient booking, doctor portal, and admin dash
 
 ## Portals
 
-| Portal | Login | Role |
-|--------|-------|------|
-| Patient | `/login` | `patient` |
-| Doctor | `/doctor/login` | `doctor` |
-| Admin | `/admin/login` | `admin` |
+| Portal | Login | Role | Demo Credentials |
+|--------|-------|------|------------------|
+| Patient | `/login` | `patient` | `patient@smilecare.com` / `demo123` |
+| Doctor | `/doctor/login` | `doctor` | `doctor@smilecare.com` / `demo123` |
+| Admin | `/admin/login` | `admin` | `admin@smilecare.com` / `Admin@12345` |
 
 ## Setup
 
